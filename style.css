@@ -1,0 +1,176 @@
+h1 {
+    color: red; 
+    text-shadow: 4px 4px 5px rgb(80, 5, 5);
+}
+.title {
+    color: orange;
+}
+#italic {
+    color: orange;
+}
+
+.container {
+    border: 10px dashed limegreen;
+    margin: 50px 5px 25px 0px;
+    padding: 30px 0px 10px 5px;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    margin: 10px;
+}
+
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#box2 {
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, blue, green, red, orange, yellow);
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(0.5);}
+}
+
+#box3 {
+    animation: getBigger 8s infinite ease-in;
+    border-radius: 50%;
+    background: orange; 
+}
+
+@keyframes changeColors {
+    0% {background-color: orange;}
+    25% {background-color: red;}
+    50% {background-color: blue;}
+    75% {background-color: yellow;}
+    100% {background-color: green;}
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px;}
+    50% {left: 100px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px;}
+}
+
+
+#box4 {
+    animation: changeColors 5s infinite linear;
+}
+
+#box5 {
+    position: relative;
+    animation: moveBox 5s infinite;
+    background-color: red;
+}
+
+#box6 {
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    background: aquamarine; 
+}
+
+nav ul {
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px;
+}
+
+.circle-img {
+    border-radius: 50%;
+}
+
+img {
+    box-shadow: 8px 8px 10px 8px rgb(126, 129, 129);
+}
+
+.flex {
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 200px;
+}
+
+form input, textarea, button, div {
+    display: block;
+    margin: 30px;
+}
+
+.nav-wrapper {
+    background-color: blue;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 100px);
+    grid-template-rows: repeat(3, [row] auto);
+    background-color: white;
+}
+
+.Box {
+    background-color: grey;
+    padding: 20px;
+    font-size: 150%;
+    border-radius: 5px;
+}
+
+.a {
+    grid-column: col  / span 3;
+    grid-row: row 1;
+}
+
+.b {
+    grid-column: col 4 / span 2;
+    grid-row: row 1;
+}
